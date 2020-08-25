@@ -83,6 +83,7 @@ function drawCell(){
 			ctx.strokeStyle = "#ffffff";
 			ctx.strokeRect( (j-1)*a+offLeft, (i-1)*a+offTop, a, a );
 
+
 			ctx.fillStyle = "#ffffff";
 			if( Cell_num[j][i] != 16 )
 				ctx.fillText( Cell_num[j][i], (j-1)*a+50+offLeft, (i-1)*a+50+offTop);
