@@ -96,8 +96,15 @@ function DrawHighLight( x, y ){
     x--;
     y--;
 
+    // ハイライトを記録(最小count=1なので-1)
+    hilight[count-1][0] = x;
+    hilight[count-1][1] = y;
+
     // 盤情報を描写する
-    ctx.fillText( count,
-                  offleft + x*cell + cell/2,
-                  offtop  + y*cell + cell/2 )
+    for( var i=0; i<count; i++ ){
+        ctx.fillText( i+1,
+                      offleft + hilight[i][0]*cell + cell/2,
+                      offtop  + hilight[i][1]*cell + cell/2 )
+    }
+    
 }

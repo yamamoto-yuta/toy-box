@@ -19,6 +19,9 @@ var cell = ( canvas.width - offleft*2 ) / wid;
 var mouseX;
 var mouseY;
 var count = 0;
+var hilight = [];
+for( var i=0; i<10; i++ )   // ハイライは10手まで
+    hilight[i] = [];
 
 // 盤初期状態
 // 0 = 不要
