@@ -8,9 +8,20 @@
 </head>
 
 <body>
-	<font face="">
-	<canvas id="id01" width="400" height="400"></canvas>
-	<script src="script.js"></script>
+	<font face="ＭＳ ゴシック">
+	<p>
+	<form name="setting">
+		人　数：<input type="number" name="player" value=5><br>
+		モード：<input type="number" name="mode" value=1><br>
+		レート：<input type="number" name="rate" value=1>
+		<input type="button" value="決定" name="set" onclick="setMode(this.form)"><br>
+	</p>
+	</form>
+	<canvas id="id01" width="360" height="560></canvas>
 	</font>
+	<font face="Arial">
+	<script src="script.js"></script>
+	</font>	
+
 </body>
 </html>
