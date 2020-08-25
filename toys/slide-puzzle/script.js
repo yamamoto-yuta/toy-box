@@ -164,6 +164,68 @@ document.onkeyup = function (e){
 }
 
 //#############################################################################
+window.addEventListener("load", function(event) {
+	var touchStartX;
+	var touchStartY;
+	var touchMoveX;
+	var touchMoveY;
+	var deltaX;
+	var deltaY;
+
+	window.addEventListener("touchstart", function(event) {
+		event.preventDefault();
+		touchStartX = event.touches[0].pageX;
+		touchStartY = event.touches[0].pageY;
+	}, false);
+
+	window.addEventListener("touchmove", function(event) {
+		event.preventDefault();
+		touchMoveX = event.changedTouches[0].pageX;
+		touchMoveY = event.changedTouches[0].pageY;
+	}, false);
+ 
+	window.addEventListener("touchend", function(event) {
+		deltaX = Math.abs(  touchMoveX - touchStartX );
+		deltaY = Math.abs(  touchMoveY - touchStartY );
+
+		if( deltaX > deltaY ){
+			if (touchStartX > touchMoveX) {
+				if (touchStartX > (touchMoveX + 50)) {
+					mx = -1;
+					my = 0;
+					move( mx, my );
+					startSet();
+				}
+			} else if (touchStartX < touchMoveX) {
+				if ((touchStartX + 50) < touchMoveX) {
+					mx = 1;
+					my = 0;
+					move( mx, my );
+					startSet();
+				}
+			}
+		}
+		else if( deltaX < deltaY ){
+			if (touchStartY > touchMoveY) {
+				if (touchStartY > (touchMoveY + 50)) {
+					mx = 0;
+					my = -1;
+					move( mx, my );
+					startSet();
+				}
+			} else if (touchStartY < touchMoveY) {
+				if ((touchStartY + 50) < touchMoveY) {
+					mx = 0;
+					my = 1;
+					move( mx, my );
+					startSet();
+				}
+			}
+		}
+	}, false);
+}, false);
+
+//#############################################################################
 function startSet(){
 	if( start == 0 ){
 		var date = new Date();
