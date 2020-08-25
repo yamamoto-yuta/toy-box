@@ -2,6 +2,7 @@
 // 盤情報作成      //////////////////////////////////////////
 function MakePanel(){
     Make( mouseX, mouseY );
+    WriteBoard( mouseX, mouseY );
 }
 
 // パネル設定処理  ///////////////////////////////////////////
@@ -28,4 +29,11 @@ function Flip( x, y ){
         case 1: return board[x][y]++;
         case 2: return board[x][y]--;
     }
+}
+
+// 盤情報書き込み  //////////////////////////////////////////
+// x : x座標
+// y : y座標
+function WriteBoard( x, y ){
+    copy[x][y] = board[x][y];
 }

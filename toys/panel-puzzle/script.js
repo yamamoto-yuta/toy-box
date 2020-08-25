@@ -5,8 +5,9 @@ var ctx = canvas.getContext('2d');
 
 // 盤定数
 var wid = 6;
-var offleft = 30;
+var offset = 0.05;      // 割合（0～1）
 
+var offleft = canvas.width/2 * offset;
 var hei = wid;
 var offtop = offleft;
 var cell = ( canvas.width - offleft*2 ) / wid;
@@ -33,7 +34,7 @@ var board = [
 ];
 
 // デバッグモード
-var DEBUG = 1;
+var DEBUG = 0;
 
 // 盤初期状態のコピー
 var copy = [];

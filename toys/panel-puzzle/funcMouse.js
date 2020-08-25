@@ -20,21 +20,25 @@ function ClickCell( event ){
 		}
 	}
 
-    // パネル反転処理
-    // モード取得
+    // パネル反転処理 //
+    // ラジオボタンからモード取得
     var element = document.getElementById("mode");
     var radioNodeList = element.rdo;
-    if( radioNodeList.value == "make" )
+    // カウントボックスのノード取得
+    var buttonNode = element.count;
+    // makeモード
+    if( radioNodeList.value == "make" ){
         MakePanel();
-    else if( radioNodeList.value == "solve" )
+        count = 0;
+        buttonNode.value = count;
+    }
+    // solveモード
+    else if( radioNodeList.value == "solve" ){
         FlipPanel();
-    
+        buttonNode.value = ++count;
+    }
     // 盤再描写
     DrawBoard();
-
-    // クリック回数カウント
-    var buttonNode = element.count;
-    buttonNode.value = ++count;
 
     /*
     ctx.fillStyle = "#ff0000";
