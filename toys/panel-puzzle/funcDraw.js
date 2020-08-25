@@ -34,7 +34,7 @@ function DrawBoard(){
 
                 // 黒マス
                 case 2:
-                    ctx.fillStyle = "#2b0f03";
+                    ctx.fillStyle = "#4a2e19";
                     DrawPanel( x, y );
                     break;
             }
@@ -73,4 +73,31 @@ function DrawCell(){
         ctx.closePath();
         ctx.stroke();
     }
+}
+
+
+// テキスト設定    ////////////////////////////////////////////
+function SetTextOption(){
+    ctx.font = "40px''";
+    ctx.textAlign = "center";
+    ctx.textBaseline = "middle";
+}
+
+// ハイライト    ////////////////////////////////////////////
+// x : x座標
+// y : y座標
+function DrawHighLight( x, y ){
+
+    // テキスト設定
+    SetTextOption();
+    ctx.fillStyle = "#ff0000";
+
+    // 座標ズレ修正
+    x--;
+    y--;
+
+    // 盤情報を描写する
+    ctx.fillText( count,
+                  offleft + x*cell + cell/2,
+                  offtop  + y*cell + cell/2 )
 }

@@ -7,11 +7,9 @@ function DrawBoardInfo(){
         return;
     }
 
-    // テキストの情報を設定
-    ctx.font = "40px''";
-    ctx.textAlign = "center";
-    ctx.textBaseline = "middle";
-    ctx.fillStyle = "#ff0000";
+    // テキスト設定
+    SetTextOption();
+    ctx.fillStyle = "#ffff00";
 
     // 盤情報を描写する
     for( var y=0; y<hei; y++ ){

@@ -7,3 +7,6 @@ http://write-remember.com/program/html/formparts/
 
 ラジオボタンの値を取得する方法
 https://lab.syncer.jp/Web/JavaScript/Snippet/30/
+
+チェックボックスがチェックされているか取得する (JavaScript プログラミング)
+https://www.ipentec.com/document/javascript-get-checkbox-value

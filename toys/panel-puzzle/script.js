@@ -3,6 +3,9 @@
 var canvas = document.getElementById("cav01");
 var ctx = canvas.getContext('2d');
 
+// フォーム情報取得
+var element = document.getElementById("mode");
+
 // 盤定数
 var wid = 6;
 var offset = 0.05;      // 割合（0～1）
