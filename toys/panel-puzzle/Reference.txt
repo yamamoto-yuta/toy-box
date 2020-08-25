@@ -1,0 +1,9 @@
+
+テキストの配置－JavaScript入門（HTML5編）
+http://www.pori2.net/html5/Canvas/090.html
+
+HTML：フォーム部品一覧
+http://write-remember.com/program/html/formparts/
+
+ラジオボタンの値を取得する方法
+https://lab.syncer.jp/Web/JavaScript/Snippet/30/

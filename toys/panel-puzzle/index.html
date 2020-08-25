@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width" />
+	<title>PuzzlePanel</title>
+	<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+<body>
+    <form id="mode">
+        <input type="radio" name="rdo" value="make"/>make
+        <input type="radio" name="rdo" value="solve" checked="checked" />solve
+        <input type="reset" name="reset" value="リセット" onclick="Initialize();">
+        クリック回数：<input type="text" name="count" size="5" maxlength="3" value="0" />
+    </form>
+	<canvas id="cav01" width="560" height="560"></canvas>
+	<script src="funcDraw.js"></script>
+    <script src="funcMouse.js"></script>
+    <script src="funcMain.js"></script>
+    <script src="funcDebug.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
